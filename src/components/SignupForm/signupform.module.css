@@ -1,0 +1,81 @@
+.form {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  border: 1px solid var(--gray);
+  padding-top: 60px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 32px;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  padding-left: 20px;
+  border-radius: 5px;
+  border: 1px solid var(--gray);
+}
+
+.errorInput {
+  width: 100%;
+  height: 40px;
+  padding-left: 20px;
+  border-radius: 5px;
+  border: 1px solid red;
+  outline: none;
+}
+.inputWrapper {
+  width: 90%;
+}
+
+.forgotPassword {
+  font-size: 14px;
+  font-weight: 700;
+  width: 100%;
+}
+
+.button {
+  width: 90%;
+  height: 40px !important;
+  border-radius: 20px;
+  background-color: var(--textDark);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--textLight);
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+.error {
+  color: red;
+  margin-top: 5px;
+}
+
+.imgWrapper {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.previewImage {
+  border-radius: 10px;
+}
+
+.previewImageWrapper {
+  position: relative;
+  width: 90px;
+  height: 100px;
+  object-fit: contain;
+}

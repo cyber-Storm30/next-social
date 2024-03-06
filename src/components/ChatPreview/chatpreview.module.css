@@ -1,0 +1,39 @@
+.container {
+  padding: 20px;
+  border-left: 1px solid var(--gray);
+  border-bottom: 1px solid var(--gray);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.nameWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  gap: 2px;
+}
+
+.imgWrapper {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.profileImg {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.time {
+  font-size: 12px;
+  color: rgb(107, 107, 107);
+  font-weight: 500;
+}

@@ -1,0 +1,32 @@
+.container {
+  width: 100%;
+  border: 1px solid var(--gray);
+  height: 80px;
+  background-color: var(--grayAlt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 111;
+}
+
+.searchbarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 90%;
+  height: 60%;
+  border: 1px solid var(--gray);
+  background-color: var(--textLight);
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.imgWrapper {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}

@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  height: 100vh;
+}
+
+.left {
+  padding-top: 80px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right {
+  width: 50%;
+  padding-top: 50px;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  padding-left: 100px;
+}
+
+.text {
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+.subText {
+  font-size: 56px;
+  width: 480px;
+  font-style: italic;
+  letter-spacing: -2px;
+}
+
+.extraText {
+  margin-top: 20px;
+}

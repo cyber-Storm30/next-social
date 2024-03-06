@@ -1,0 +1,27 @@
+.container {
+  padding-top: 10px;
+}
+
+.topWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-left: 1px solid var(--gray);
+  border-bottom: 1px solid var(--gray);
+  cursor: pointer;
+}
+
+.imgWrapper {
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+
+.chatSection {
+  height: 100vh;
+  border-left: 1px solid var(--gray);
+  border-right: 1px solid var(--gray);
+  border-bottom: 1px solid var(--gray);
+  cursor: pointer;
+}

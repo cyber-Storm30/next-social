@@ -1,0 +1,33 @@
+.modalContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 30%;
+  height: 60%;
+  background-color: var(--textLight);
+  outline: none;
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.emptyWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.emptyWrapper > p {
+  font-size: 14px;
+  color: rgb(39, 39, 39);
+}

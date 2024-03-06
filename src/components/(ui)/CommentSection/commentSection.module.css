@@ -1,0 +1,10 @@
+.container {
+  border-left: 1px solid var(--gray);
+  border-right: 1px solid var(--gray);
+  border-bottom: 1px solid var(--gray);
+}
+
+.replySection {
+  margin-left: 50px;
+  margin-bottom: -20px;
+}

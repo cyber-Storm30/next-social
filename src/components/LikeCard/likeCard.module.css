@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px 10px 30px;
+  border-bottom: 1px solid var(--gray);
+}
+
+.imgWrapper {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.profileImg {
+  border-radius: 50%;
+}
+
+.button {
+  height: 50%;
+  padding: 5px 10px 5px 10px;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  background-color: var(--primary);
+  color: var(--textLight);
+  cursor: pointer;
+}
+
+.buttonAlt {
+  height: 50%;
+  padding: 5px 10px 5px 10px;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  background-color: var(--gray);
+  color: var(--textDark);
+  cursor: pointer;
+}
+
+.userDetails {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

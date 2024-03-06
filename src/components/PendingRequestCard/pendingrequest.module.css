@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.detailsWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.detailsWrapper > p {
+  font-size: 14px;
+}
+
+.imgWrapper {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.img {
+  border-radius: 50%;
+}
+
+.button {
+  background-color: var(--primary);
+  color: var(--textLight);
+  border: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.buttonAlt {
+  background-color: var(--gray);
+  color: var(--textDark);
+  border: none;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}

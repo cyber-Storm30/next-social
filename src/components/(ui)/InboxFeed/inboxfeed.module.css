@@ -1,0 +1,88 @@
+.container {
+  border-left: 1px solid var(--gray);
+  border-bottom: 1px solid var(--gray);
+  border-right: 1px solid var(--gray);
+}
+
+.chatSection {
+  height: 80vh;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  padding-bottom: 40px;
+  gap: 15px;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--gray);
+  padding-bottom: 5px;
+  position: sticky;
+  top: 0px;
+  background-color: white;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.imgWrapper {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.img {
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.innerContainer {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--gray);
+  height: 45px;
+  background-color: var(--grayAlt);
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 50px;
+}
+
+.inputWrapper {
+  display: flex;
+  width: 100%;
+}
+
+.imgWrapper {
+  position: relative;
+  width: 32px;
+  height: 30px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.imgWrapperAlt {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  margin-left: 2px;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 10px;
+}
+
+.inputWrapper {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  position: sticky;
+  bottom: 20px;
+}
