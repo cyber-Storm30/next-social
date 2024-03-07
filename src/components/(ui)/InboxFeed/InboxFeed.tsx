@@ -38,7 +38,7 @@ const InboxFeed: React.FC<InboxFeedProps> = ({ socket }) => {
       }
     };
     getData();
-  }, [open]);
+  }, []);
 
   const handleSubmit = async () => {
     try {
