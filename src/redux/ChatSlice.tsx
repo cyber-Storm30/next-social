@@ -52,10 +52,7 @@ export const chatSlice = createSlice({
         state.messages = [...state.messages, action.payload];
       }
     },
-    selectUser: (
-      state,
-      action: PayloadAction<{ user: User; chatId: string }>
-    ) => {
+    selectUser: (state, action) => {
       state.user = action.payload.user;
       state.chatId = action.payload.chatId;
     },

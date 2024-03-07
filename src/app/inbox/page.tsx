@@ -16,6 +16,7 @@ const Inbox = () => {
       newSocket.disconnect();
     };
   }, []);
+
   return (
     <div className={styles.container}>
       <div className={styles.left}>
