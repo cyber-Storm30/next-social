@@ -1,7 +1,10 @@
 import axios, { AxiosResponse, AxiosError } from "axios";
 axios.defaults.withCredentials = true;
 
-export const BASE_URI = "http://localhost:8000";
+// export const BASE_URI = "http://localhost:8000";
+export const BASE_URI = "https://social-backend-gateway.onrender.com";
+// export const SOCKET_URI = "http://localhost:5001";
+export const SOCKET_URI = "https://social-backend-socket.onrender.com";
 
 export const postData = async (
   url: string,
