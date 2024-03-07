@@ -3,13 +3,51 @@ import {
   handleGetSinglePost,
   handleSubmitPost,
 } from "@/services/postService";
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const initialState = {
+interface User {
+  _id: string;
+  username: string;
+  email: string;
+  image: string;
+  req_sent_to: string[];
+  req_received_from: string[];
+  connections: string[];
+  createdAt: string;
+  updatedAt: string;
+  __v: number;
+}
+
+interface Post {
+  userId: User;
+  body: string;
+  image: string;
+  likes: string[];
+  comments: string[];
+  _id: string;
+  createdAt: string;
+  updatedAt: string;
+  __v: number;
+}
+
+interface CreatePostResponse {
+  success: boolean;
+  data: Post;
+  message: string;
+}
+
+interface PostState {
+  isLoading: boolean;
+  posts: Post[];
+  isError: boolean;
+  singlePost: Post;
+}
+
+const initialState: PostState = {
   isLoading: false,
   posts: [],
-  isError: {},
-  singlePost: {},
+  isError: false,
+  singlePost: {} as Post,
 };
 
 export const postSlice = createSlice({
@@ -43,19 +81,22 @@ export const postSlice = createSlice({
     builder.addCase(handleSubmitPost.pending, (state, action) => {
       state.isLoading = true;
     });
-    builder.addCase(handleSubmitPost.fulfilled, (state, action) => {
-      state.isLoading = false;
-      if (action.payload.data) {
-        state.posts = [action.payload.data, ...state.posts];
+    builder.addCase(
+      handleSubmitPost.fulfilled,
+      (state, action: PayloadAction<CreatePostResponse>) => {
+        state.isLoading = false;
+        if (action.payload.data) {
+          state.posts = [action.payload.data, ...state.posts];
+        }
       }
-    });
+    );
     builder.addCase(handleSubmitPost.rejected, (state, action) => {
       state.isLoading = false;
     });
   },
   reducers: {
     resetPostError: (state) => {
-      state.isError = {};
+      state.isError = false;
       state.isLoading = false;
     },
   },
