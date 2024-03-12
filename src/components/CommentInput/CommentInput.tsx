@@ -24,6 +24,8 @@ const CommentInput: React.FC<CommentInputProps> = (props) => {
     setComment("");
   };
 
+  console.log("comment input", user);
+
   return (
     <div className={styles.outerContainer}>
       <div className={styles.container}>

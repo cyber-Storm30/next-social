@@ -5,7 +5,6 @@ import styles from "./chatsection.module.css";
 
 const ChatSection = () => {
   const messages = useSelector((state: any) => state.chat.messages);
-  const user = useSelector((state: any) => state.auth.user);
 
   return (
     <div className={styles.container}>

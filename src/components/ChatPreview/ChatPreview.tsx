@@ -5,7 +5,6 @@ import { AppDispatch } from "@/redux/store";
 import { useDispatch, useSelector } from "react-redux";
 import { handleGetMessages } from "@/services/chatService";
 import { selectUser } from "@/redux/ChatSlice";
-import io from "socket.io-client";
 
 interface User {
   _id: string;
@@ -36,7 +35,7 @@ const ChatPreview: React.FC<ChatPreviewProps> = (props) => {
   const dispatch: AppDispatch = useDispatch();
 
   const handleOpenChat = async () => {
-    socket.emit("joinRoom", {
+    socket?.emit("joinRoom", {
       user: user?._id,
       room: data?._id,
     });

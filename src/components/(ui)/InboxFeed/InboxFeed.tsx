@@ -63,9 +63,9 @@ const InboxFeed: React.FC<InboxFeedProps> = ({ socket }) => {
   useEffect(() => {
     if (socket) {
       socket.on("receiveMessage", (data: any) => {
+        console.log("message received", data);
         dispatch(updateMessage(data));
       });
-
       return () => {
         socket.off("receiveMessage");
       };

@@ -2,11 +2,12 @@
 import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import Feed from "@/components/(ui)/Feed/Feed";
-import { useAuth } from "@/hooks/useAuth";
+// import { useAuth } from "@/hooks/useAuth";
 import { boolean } from "zod";
 import { useRouter } from "next/navigation";
 import LeftBar from "@/components/(ui)/LeftBar/LeftBar";
 import RightBar from "@/components/(ui)/RightBar/RightBar";
+import { useSelector } from "react-redux";
 
 interface AuthInterface {
   success: boolean;
@@ -15,15 +16,12 @@ interface AuthInterface {
 
 const Home = () => {
   const router = useRouter();
+  const user = useSelector((state: any) => state.auth.user);
 
   useEffect(() => {
-    const getAuthHook = async () => {
-      const { success } = await useAuth();
-      if (success === false) {
-        router.push("/notAuthorised");
-      }
-    };
-    getAuthHook();
+    if (!user?._id) {
+      router.push("/login");
+    }
   }, []);
 
   return (

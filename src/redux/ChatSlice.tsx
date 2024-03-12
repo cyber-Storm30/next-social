@@ -49,7 +49,7 @@ export const chatSlice = createSlice({
   reducers: {
     updateMessage: (state, action: PayloadAction<Message>) => {
       if (state.chatId === action.payload.chatId) {
-        state.messages = [...state.messages, action.payload];
+        state.messages = [action.payload, ...state.messages];
       }
     },
     selectUser: (state, action) => {
