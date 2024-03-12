@@ -3,7 +3,7 @@ axios.defaults.withCredentials = true;
 
 // export const BASE_URI = "http://localhost:8000";
 export const BASE_URI =
-  "http://ec2-3-110-183-97.ap-south-1.compute.amazonaws.com:8000";
+  "http://ec2-35-154-110-25.ap-south-1.compute.amazonaws.com:8000";
 // export const SOCKET_URI = "http://localhost:5001";
 export const SOCKET_URI =
   "http://ec2-3-110-183-97.ap-south-1.compute.amazonaws.com:5001";
