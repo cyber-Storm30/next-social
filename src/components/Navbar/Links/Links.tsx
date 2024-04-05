@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import styles from "./links.module.css";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
@@ -7,9 +7,13 @@ import Link from "next/link";
 import { logout } from "@/redux/AuthSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch } from "@/redux/store";
+import BellIcon from "../../../../public/bell.png";
+import Image from "next/image";
+import NotificationModal from "@/components/(ui)/NotificationModal/NotificationModal";
 
 const Links: React.FC = () => {
   const user = useSelector((state: any) => state.auth.user);
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
   const pathname = usePathname();
   const router = useRouter();
   const handleNavigate = (val: string) => {
@@ -28,8 +32,18 @@ const Links: React.FC = () => {
     router.push("/login");
     dispatch(logout());
   };
+
+  const handleModalClose = () => {
+    setModalOpen(false);
+  };
   return (
     <div className={styles.container}>
+      {modalOpen && (
+        <NotificationModal
+          open={modalOpen}
+          handleModalClose={handleModalClose}
+        />
+      )}
       <div className={styles.leftContainer}>
         <div className={styles.logoWrapper}>
           <Link href="/">
@@ -55,6 +69,14 @@ const Links: React.FC = () => {
           </div>
         ) : (
           <div className={styles.options}>
+            <div
+              className={styles.bell}
+              onClick={() => {
+                setModalOpen(true);
+              }}
+            >
+              <Image src={BellIcon} alt="" fill />
+            </div>
             {user && (
               <form action={handleLogout}>
                 <button className={styles.authButton}>Logout</button>

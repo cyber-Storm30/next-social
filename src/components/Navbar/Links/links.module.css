@@ -140,3 +140,10 @@
   font-weight: 500;
   border: 1px solid var(--gray);
 }
+
+.bell {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}

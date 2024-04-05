@@ -1,0 +1,9 @@
+.container {
+  position: absolute;
+  top: 60px;
+  right: 200px;
+  background-color: var(--textLight);
+  width: 20vw;
+  height: 80vh;
+  outline: none;
+}
