@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch } from "@/redux/store";
 import BellIcon from "../../../../public/bell.png";
 import Image from "next/image";
-import NotificationModal from "@/components/(ui)/NotificationModal/NotificationModal";
+import NotificationModal from "@/components/(ui)/NotificationSection/NotificationSection";
 
 const Links: React.FC = () => {
   const user = useSelector((state: any) => state.auth.user);
@@ -38,12 +38,6 @@ const Links: React.FC = () => {
   };
   return (
     <div className={styles.container}>
-      {modalOpen && (
-        <NotificationModal
-          open={modalOpen}
-          handleModalClose={handleModalClose}
-        />
-      )}
       <div className={styles.leftContainer}>
         <div className={styles.logoWrapper}>
           <Link href="/">
@@ -71,9 +65,7 @@ const Links: React.FC = () => {
           <div className={styles.options}>
             <div
               className={styles.bell}
-              onClick={() => {
-                setModalOpen(true);
-              }}
+              onClick={() => handleNavigate("notification")}
             >
               <Image src={BellIcon} alt="" fill />
             </div>

@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  min-height: calc(100vh - 60px);
+}
+
+.left {
+  flex: 0.7;
+  position: sticky;
+  top: 0;
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
+}
+.center {
+  flex: 0 0 770px;
+  max-height: calc(100vh - 60px);
+  overflow-y: scroll;
+}
+
+.center::-webkit-scrollbar {
+  display: none;
+}
+
+.right {
+  flex: 0.7;
+  position: sticky;
+  top: 0;
+  height: 100%;
+  overflow-y: auto;
+}

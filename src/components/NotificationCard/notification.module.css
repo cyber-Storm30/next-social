@@ -1,0 +1,25 @@
+.container {
+  padding: 20px;
+  border-left: 1px solid var(--gray);
+  border-right: 1px solid var(--gray);
+  border-bottom: 1px solid var(--gray);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.notificationCard {
+  margin-bottom: 20px;
+}
+
+.imgWrapper {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.image {
+  border-radius: 50%;
+}

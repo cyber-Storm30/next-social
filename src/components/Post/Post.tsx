@@ -59,11 +59,13 @@ const Post: React.FC<PostInterface> = (props) => {
     }
     try {
       const res = await handleLikePost(data?._id, loggedInUserId);
-      console.log(res);
+      console.log("res", res);
       if (res.status === 500) {
         alert("Something went wrong,try again later");
       }
-    } catch (err) {}
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const handleNavigation = () => {
